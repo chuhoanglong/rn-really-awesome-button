@@ -410,7 +410,8 @@ export default class Button extends React.Component {
         style={[
           styles.container__view,
           dynamicStyles.container__view,
-          animatedStyles
+          animatedStyles,
+          this.props.style,
         ]}
       >
         {children}
@@ -438,27 +439,27 @@ export default class Button extends React.Component {
             styles.container,
             dynamicStyles.container,
             animatedValues.animatedContainer,
-            style
           ]}
         >
-          <Animated.View
+          {/* <Animated.View
             testID="aws-btn-shadow"
             style={[
               styles.shadow,
               dynamicStyles.shadow,
-              animatedValues.animatedShadow
+              animatedValues.animatedShadow,
             ]}
           />
           <View
             testID="aws-btn-bottom"
             style={[styles.bottom, dynamicStyles.bottom]}
-          />
+          /> */}
           <Animated.View
             testID="aws-btn-content"
             style={[
               styles.content,
               dynamicStyles.content,
-              animatedValues.animatedContent
+              animatedValues.animatedContent,
+              this.props.style,
             ]}
           >
             <View
