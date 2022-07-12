@@ -1,6 +1,6 @@
 {
   "name": "@chuhoanglong/rn-really-awesome-button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ReactNative performant component that renders an 60fps animated set of progress enabled 3D UI buttons.",
   "main": "src/index.js",
   "typings": "./index.d.ts",

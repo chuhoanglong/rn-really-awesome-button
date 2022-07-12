@@ -425,7 +425,7 @@ export default class Button extends React.Component {
       ...this.props,
       stateWidth: this.state.width
     });
-    const { ExtraContent, style, activityColor } = this.props;
+    const { ExtraContent, style, activityColor, borderRadius } = this.props;
 
     return (
       <TouchableWithoutFeedback
@@ -447,11 +447,12 @@ export default class Button extends React.Component {
               styles.shadow,
               dynamicStyles.shadow,
               animatedValues.animatedShadow,
+              { borderRadius }
             ]}
           />
           <View
             testID="aws-btn-bottom"
-            style={[styles.bottom, dynamicStyles.bottom]}
+            style={[styles.bottom, dynamicStyles.bottom, { borderRadius }]}
           />
           <Animated.View
             testID="aws-btn-content"
@@ -459,12 +460,12 @@ export default class Button extends React.Component {
               styles.content,
               dynamicStyles.content,
               animatedValues.animatedContent,
-              this.props.style,
+              style,
             ]}
           >
             <View
               testID="aws-btn-text"
-              style={[styles.text, dynamicStyles.text, this.props.style,]}
+              style={[styles.text, dynamicStyles.text, style,]}
               onLayout={this.textLayout}
             >
               {ExtraContent}
